@@ -11,9 +11,12 @@
     <title>Document</title>
 </head>
 <body>
-<form>
+<form >
   <div class="mb-3">
     <label for="id" class="form-label">Ingresa tu ID</label>
+    <a data-toggle="tooltip" title="<img src='image/id.jpg' />">
+        <i class="icon-shopping-cart"></i>
+    </a>
     <input type="text" class="form-control" id="id" aria-describedby="ID">
     <!-- <div id="idHelp" class="form-text">Lo puedes encontrar en tu ticket como ID</div> -->
   </div>
@@ -23,5 +26,14 @@
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
+
+<script>
+    $('a[data-toggle="tooltip"]').tooltip({
+    animated: 'fade',
+    placement: 'bottom',
+    html: true
+});
+</script>
 </body>
 </html>
+
