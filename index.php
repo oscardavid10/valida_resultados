@@ -58,19 +58,20 @@ $(document).on('submit', '#form_buscar_orden', function() {
 //     var empresa = $("#empresa_cuenta_iva").val();
 //     var tipo = $('input:radio[name=customRadioInline1]:checked').val();
 
-    $.ajax({
-            url: "https://omnilab.nojoch.cloud/index.php?id="+id+"&cr="+cr,
-            type: "GET",
-            // data: {
-            //     "ejercicio" : ejercicio,
-            //     "periodo" : periodo,
-            //     "empresa" : empresa,
-            //     "tipo" : tipo
-            // },
-            success: function(datas) {
-                  $("#cargar_informacion_cuenta_iva").html(datas);
-                }
-            });
+$(location).attr('href',"https://omnilab.nojoch.cloud/index.php?id="+id+"&cr="+cr); 
+    // $.ajax({
+    //         url: "https://omnilab.nojoch.cloud/index.php?id="+id+"&cr="+cr,
+    //         type: "GET",
+    //         // data: {
+    //         //     "ejercicio" : ejercicio,
+    //         //     "periodo" : periodo,
+    //         //     "empresa" : empresa,
+    //         //     "tipo" : tipo
+    //         // },
+    //         success: function(datas) {
+    //               $("#cargar_informacion_cuenta_iva").html(datas);
+    //             }
+    //         });
 
     return false;
 });
