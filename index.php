@@ -21,7 +21,7 @@
         <a class="btn btn-light" data-toggle="popover-hover" data-img="image/id.jpg" data-original-title="" title="">
             <b>?</b>
         </a>
-    <input type="text" class="form-control" id="id" aria-describedby="ID">
+    <input type="text" class="form-control" id="id" maxlength="12" required>
     <!-- <div id="idHelp" class="form-text">Lo puedes encontrar en tu ticket como ID</div> -->
   </div>
   <div class="mb-3">
@@ -29,7 +29,7 @@
     <a class="btn btn-light" data-toggle="popover-hover" data-img="image/cr.jpg" data-original-title="" title="">
             <b>?</b>
         </a>
-    <input type="text" class="form-control" id="cr">
+    <input type="text" class="form-control" id="cr" maxlength="6" required>
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
@@ -43,6 +43,38 @@ $('[data-toggle="popover-hover"]').popover({
   placement: 'bottom',
   content: function () { return '<img src="' + $(this).data('img') + '" />'; }
 });
+
+
+$(document).on('submit', '#form_buscar_orden', function() {
+
+//     $("#cargar_informacion_cuenta_iva").html("<div class='d-flex justify-content-center'>\
+//   <div class='spinner-border' role='status'>\
+//     <span class='sr-only'>Loading...</span>\
+//   </div>\
+// </div>");
+
+        var id = $("#id").val();
+        var cr = $("#cr").val();
+//     var empresa = $("#empresa_cuenta_iva").val();
+//     var tipo = $('input:radio[name=customRadioInline1]:checked').val();
+
+//     $.ajax({
+//             url: "funciones/iva.php",
+//             type: "POST",
+//             data: {
+//                 "ejercicio" : ejercicio,
+//                 "periodo" : periodo,
+//                 "empresa" : empresa,
+//                 "tipo" : tipo
+//             },
+//             success: function(datas) {
+//                   $("#cargar_informacion_cuenta_iva").html(datas);
+//                 }
+//             });
+
+    return false;
+});
+
 </script>
 
 </html>
