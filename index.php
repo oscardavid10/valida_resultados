@@ -26,6 +26,9 @@
   </div>
   <div class="mb-3">
     <label for="cr" class="form-label">Ingresa tu CR</label>
+    <a class="btn btn-light" data-toggle="popover-hover" data-img="image/cr.jpg" data-original-title="" title="">
+            <b>?</b>
+        </a>
     <input type="text" class="form-control" id="cr">
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
