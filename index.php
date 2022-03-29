@@ -28,11 +28,9 @@
 </form>
 
 <script>
-    $('a[data-toggle="tooltip"]').tooltip({
-    animated: 'fade',
-    placement: 'bottom',
-    html: true
-});
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 </script>
 </body>
 </html>
