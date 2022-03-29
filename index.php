@@ -30,7 +30,9 @@
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
+</body>
 
+<script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $('[data-toggle="popover-hover"]').popover({
   html: true,
@@ -39,6 +41,6 @@ $('[data-toggle="popover-hover"]').popover({
   content: function () { return '<img src="' + $(this).data('img') + '" />'; }
 });
 </script>
-</body>
+
 </html>
 
