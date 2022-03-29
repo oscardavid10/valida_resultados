@@ -13,7 +13,7 @@
     <title>Document</title>
 </head>
 <body>
-<form >
+<form autocomplete="off" action="" id = 'form_buscar_orden' class="form-horizontal" onsubmit=" return false">
   <div class="mb-3">
     <label for="id" class="form-label">Ingresa tu ID</label>
         <a class="btn btn-light" data-toggle="popover-hover" data-img="image/id.jpg" data-original-title="" title="">
@@ -29,8 +29,13 @@
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
-<script>
-
+<script type="text/javascript">
+$('[data-toggle="popover-hover"]').popover({
+  html: true,
+  trigger: 'hover',
+  placement: 'bottom',
+  content: function () { return '<img src="' + $(this).data('img') + '" />'; }
+});
 </script>
 </body>
 </html>
